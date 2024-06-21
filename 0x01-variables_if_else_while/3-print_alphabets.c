@@ -16,9 +16,9 @@ int main(void)
 	}
 
 	for (c = 65; c <= 'Z'; c++)
-        {
-                putchar(c);
-        }
+	{
+		putchar(c);
+	}
 
 	putchar(10);
 	return (0);

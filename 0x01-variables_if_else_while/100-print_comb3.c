@@ -12,9 +12,9 @@ int main(void)
 
 	for (c = 0; c <= 9; c++)
 	{
-		for (n=0; n <= 9; n++)
+		for (n = 0; n <= 9; n++)
 		{
-			if ( c < n )
+			if (c < n)
 			{
 				putchar(c + 48);
 				putchar(n + 48);

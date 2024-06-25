@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /* betty style doc for function print_last_digit goes there */
 /**
@@ -14,6 +15,12 @@ int print_last_digit(int n)
 	if (n < 0)
 	{
 		n *= -1;
+	}
+	
+	if (n == INT_MIN)
+	{
+		_putchar('8');
+		return (8);
 	}
 
 	m = n % 10;

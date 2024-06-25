@@ -12,15 +12,24 @@ void times_table(void)
 
 	while (i < 10)
 	{
+		_putchar('0');
 		j = 0;
 		while (j < 10)
 		{
 			m = i * j;
-			_putchar('0' + m / 10);
-			_putchar('0' + m % 10);
+			
 			_putchar(',');
 			_putchar(' ');
-			_putchar(' ');
+
+                        if (m / 10 == 0)
+                        {
+                                _putchar(' ');
+                        }
+			else
+			{
+				_putchar('0' + m / 10);
+			}
+			_putchar('0' + m % 10);
 			
 			j++;
 		}

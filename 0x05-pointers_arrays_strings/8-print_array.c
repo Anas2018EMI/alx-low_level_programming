@@ -24,8 +24,7 @@ void print_array(int *a, int n)
 		{
 			printf("%i, ", *(a + counter));
 		}
-		counter++;
-		
+		counter++;	
 	}
 	printf("\n");
 

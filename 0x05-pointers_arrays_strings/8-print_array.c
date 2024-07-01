@@ -16,7 +16,7 @@ void print_array(int *a, int n)
 
 	while (counter < n)
 	{
-		if (counter == n-1)
+		if (counter == n - 1)
 		{
 			printf("%i", *(a + counter));
 		}

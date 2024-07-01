@@ -24,10 +24,10 @@ void rev_string(char *s)
 		arr[i] = *(s + counter - 1 - i);
 		i++;
 	}
-	i=0;
-	 while (i < counter)
-        {
-               *(s + i) = arr[i];
-                i++;
-        }
+	i = 0;
+	while (i < counter)
+	{
+		*(s + i) = arr[i];
+		i++;
+	}
 }

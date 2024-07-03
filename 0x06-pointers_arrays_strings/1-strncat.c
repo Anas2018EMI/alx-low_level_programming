@@ -1,14 +1,15 @@
 #include "main.h"
 
-/* betty style doc for function _strcat goes there */
+/* betty style doc for function _strncat goes there */
 /**
- * _strcat - Entry point
+ * _strncat - Entry point
  *
  * @src: first arg
  * @dest: second arg
+ * @n: third arg
  * Return: dest
  */
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
 	int counter = 0, i = 0;
 

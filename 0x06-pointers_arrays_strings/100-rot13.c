@@ -21,11 +21,13 @@ char *rot13(char *str)
 			if (*(str + counter) == *(sep + i))
 			{
 				*(str + counter) = *(sep + ((i + 13) % 26));
+				break;
 			}
 			else if (*(str + counter) == *(rep + i))
-                        {
-                                *(str + counter) = *(rep + ((i + 13) % 26));
-                        }
+			{
+				*(str + counter) = *(rep + ((i + 13) % 26));
+				break;
+			}
 			i++;
 		}
 		counter++;

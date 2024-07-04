@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /* betty style doc for function cap_string goes there */
 /**

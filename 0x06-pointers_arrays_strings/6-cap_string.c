@@ -13,6 +13,10 @@ char *cap_string(char *str)
 	int counter = 0, i = 0;
 	char *sep = " \t\n,;.!?\"(){}";
 
+	if (*(str + counter) >= 97 && *(str + counter) <= 122)
+	{
+		*(str + counter) -= 32;
+	}
 	while (*(str + counter) != '\0')
 	{
 		i = 0;

@@ -6,7 +6,6 @@
  *
  * @a: first arg
  * @n: second arg
- * Return: dest
  */
 void reverse_array(int *a, int n)
 {

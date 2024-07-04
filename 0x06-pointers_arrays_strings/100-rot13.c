@@ -16,7 +16,7 @@ char *rot13(char *str)
 	while (*(str + counter) != '\0')
 	{
 		i = 0;
-		while (i < 26)
+		while (i<26)
 		{
 			if (*(str + counter) == *(sep + i))
 			{

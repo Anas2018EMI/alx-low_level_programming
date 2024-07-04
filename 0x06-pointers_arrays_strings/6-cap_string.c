@@ -23,6 +23,10 @@ char *cap_string(char *str)
 				if (*(str + counter + 1) >= 97 && *(str + counter + 1) <= 122)
 				{
 					*(str + counter + 1) -= 32;
+					if (*(str + counter) == '\t')
+					{
+						*(str + counter) = ' ';
+					}
 				}
 			}
 			i++;

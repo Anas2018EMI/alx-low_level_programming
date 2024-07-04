@@ -9,31 +9,12 @@
  */
 void reverse_array(int *a, int n)
 {
-	int m, limit, i = 0;
+	int temp, i;
 
-	if (n != 1 && n != 2)
+	for (i = 0; i < n / 2; i++)
 	{
-		if (n % 2 != 0)
-		{
-			limit = (n - 1) / 2;
-		}
-		else
-		{
-			limit = n / 2;
-		}
-		while (i <= limit)
-		{
-			m = *(a + i);
-			*(a + i) = *(a + n - 1 - i);
-			*(a + n - 1 - i) = m;
-			i++;
-		}
+		temp = a[i];
+		a[i] = a[n - 1 - i];
+		a[n - 1 - i] = temp;
 	}
-	else if (n == 2)
-	{
-		m = *a;
-		*a = *(a + 1);
-		*(a + 1) = m;
-	}
-
 }

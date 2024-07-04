@@ -24,10 +24,6 @@ char *cap_string(char *str)
 				{
 					*(str + counter + 1) -= 32;
 				}
-				if (*(str + counter) == '\t')
-				{
-					*(str + counter) = ' ';
-				}
 			}
 			i++;
 		}

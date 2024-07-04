@@ -11,7 +11,7 @@ void reverse_array(int *a, int n)
 {
 	int m, limit, i = 0;
 
-	if (n != 1)
+	if (n != 1 && n != 2)
 	{
 		if (n % 2 != 0)
 		{
@@ -28,6 +28,12 @@ void reverse_array(int *a, int n)
 			*(a + n - 1 - i) = m;
 			i++;
 		}
+	}
+	else if (n == 2)
+	{
+		m = *a;
+		*a = *(a + 1);
+		*(a + 1) = m;
 	}
 
 }

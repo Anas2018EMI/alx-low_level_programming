@@ -2,9 +2,9 @@
 #include <stddef.h>
 
 
-/* betty style doc for function _memset goes there */
+/* betty style doc for function _strchr goes there */
 /**
- * _memset - Entry point
+ * _strchr - Entry point
  *
  * @s: first arg
  * @c: second arg
@@ -19,8 +19,9 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 		{
-			ptr = &s[i - 1];
+			ptr = &s[i];
 			found = 1;
+			return (ptr);
 		}
 		i++;
 	}

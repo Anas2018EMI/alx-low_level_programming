@@ -1,36 +1,37 @@
 #include "main.h"
 #include <stddef.h>
 
+/* betty style doc for function _strstr goehaystackthere */
 /**
- * _strstr - Locates a substring
- * @haystack: The string to search in
- * @needle: The substring to search for
+ * _strstr - Entry point
+ * @haystack: first arg
+ * @needle: second arg
  *
- * Return: Pointer to the beginning of the located substring,
- *         or NULL if the substring is not found
+ * Return: string
  */
 char *_strstr(char *haystack, char *needle)
 {
-	char *h, *n;
+	int i = 0, j = 0, l = 0;
+	char *ptr;
 
 	if (*needle == '\0')
-		return (haystack);
-
-	while (*haystack != '\0')
 	{
-		h = haystack;
-		n = needle;
-
-		while (*n != '\0' && *h == *n)
+		return (haystack);
+	}
+	while (*(haystack + i) != '\0')
+	{
+		l = 0;
+		j = i;
+		while (*(needle + ++l) == *(haystack + ++i) || *(needle + l) == '\0')
 		{
-			h++;
-			n++;
+			if (*(needle + l) == '\0')
+			{
+				ptr = &haystack[j];
+				return (ptr);
+			}
 		}
-
-		if (*n == '\0')
-			return (haystack);
-
-		haystack++;
+		i = j;
+		i++;
 	}
 
 	return (NULL);

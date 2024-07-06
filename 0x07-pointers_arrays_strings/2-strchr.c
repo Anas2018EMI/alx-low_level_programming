@@ -25,6 +25,11 @@ char *_strchr(char *s, char c)
 		}
 		i++;
 	}
+	if (*(s + i) == '\0' && c == '\0')
+	{
+		ptr = &s[i];
+		return (ptr);
+	}
 	if (found == 0)
 	{
 		ptr = NULL;

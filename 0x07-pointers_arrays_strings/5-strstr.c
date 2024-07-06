@@ -7,7 +7,7 @@
  * @haystack: first arg
  * @needle: second arg
  *
- * Return: unsigned int
+ * Return: string
  */
 char *_strstr(char *haystack, char *needle)
 {

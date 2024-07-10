@@ -1,5 +1,14 @@
 #include "main.h"
 
+/* betty style doc for function _sqrt_check goes there */
+/**
+ * _sqrt_check - Entry point
+ *
+ * @n: first arg
+ * @i: second arg
+ *
+ * Return: int
+ */
 /* betty style doc for function _sqrt_recursion goes there */
 /**
  * _sqrt_recursion - Entry point

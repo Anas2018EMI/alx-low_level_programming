@@ -16,13 +16,13 @@ int main(int argc, char *argv[])
 {
 	int a, b;
 
-	if (argc > 1)
+	if (argc == 3)
 	{
 		a = atoi(argv[1]);
 		b = atoi(argv[2]);
 		printf("%i\n", a * b);
 	}
-	else if (argc == 1)
+	else
 	{
 		printf("Error\n");
 		return (1);

@@ -10,7 +10,7 @@
  * @argc: first arg
  * @argv: second arg
  *
- * Return: Always 0 (Success)
+ * Return: int
  */
 int main(int argc, char *argv[])
 {

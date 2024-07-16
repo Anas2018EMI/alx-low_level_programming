@@ -20,6 +20,10 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	ptr = malloc(size);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
 
 	while (i < size)
 	{

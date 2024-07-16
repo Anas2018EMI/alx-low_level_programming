@@ -35,16 +35,16 @@ char *str_concat(char *s1, char *s2)
 	int i = 0, j = 0, k = 0;
 	char *ptr;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		return ("\0");
-	}
 	i = len_str(s1);
 	j = len_str(s2);
 	ptr = malloc(i + j + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
+	}
+	if (s1 == NULL && s2 == NULL)
+	{
+		*ptr = '\0';
 	}
 	if (s1 != NULL)
 	{

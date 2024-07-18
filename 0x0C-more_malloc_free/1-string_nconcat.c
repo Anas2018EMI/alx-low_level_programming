@@ -1,7 +1,6 @@
 #include "main.h"
 #include <stddef.h>
 #include <stdlib.h>
-#include <string.h>
 
 /* betty style doc for function string_nconcat goes there */
 /**
@@ -14,24 +13,26 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
-	char *ptr = malloc(strlen(s1) + n + 1);
+	unsigned int i, j = 0;
+	char *ptr;
 
+	while (*(s1 + j) != '\0')
+	{
+		j++;
+	}
+	ptr = malloc(j + n + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < strlen(s1) + n + 1; i++)
-	{
-		*(ptr + i) = '0';
-	}
-	for (i = 0; i < strlen(s1); i++)
+
+	for (i = 0; i < j; i++)
 	{
 		*(ptr + i) = *(s1 + i);
 	}
-	while (i < strlen(s1) + n)
+	while (i < j + n)
 	{
-		*(ptr + i) = *(s2 + i - strlen(s1));
+		*(ptr + i) = *(s2 + i - j);
 		i++;
 	}
 	*(ptr + i) = '\0';

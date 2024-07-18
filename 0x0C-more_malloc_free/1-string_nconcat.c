@@ -14,27 +14,27 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-    unsigned int i;
-    char *ptr = malloc(strlen(s1) + n + 1);
+	unsigned int i;
+	char *ptr = malloc(strlen(s1) + n + 1);
 
-    if (ptr == NULL)
-    {
-        return (NULL);
-    }
-    for (i = 0; i < strlen(s1) + n + 1; i++)
-    {
-        *(ptr + i) = '0';
-    }
-    for (i = 0; i < strlen(s1); i++)
-    {
-        *(ptr + i) = *(s1 + i);
-    }
-    while (i < strlen(s1) + n)
-    {
-        *(ptr + i) = *(s2 + i - strlen(s1));
-        i++;
-    }
-    *(ptr + i) = '\0';
-    return (ptr);
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	for (i = 0; i < strlen(s1) + n + 1; i++)
+	{
+		*(ptr + i) = '0';
+	}
+	for (i = 0; i < strlen(s1); i++)
+	{
+		*(ptr + i) = *(s1 + i);
+	}
+	while (i < strlen(s1) + n)
+	{
+		*(ptr + i) = *(s2 + i - strlen(s1));
+		i++;
+	}
+	*(ptr + i) = '\0';
+	return (ptr);
 }
 

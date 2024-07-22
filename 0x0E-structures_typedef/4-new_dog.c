@@ -2,7 +2,24 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+/**
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 /* betty style doc for function new_dog goes there */
 /**
  * new_dog - Entry point
@@ -17,8 +34,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *d;
 	int len1, len2;
 
-	len1 = strlen(name);
-	len2 = strlen(owner);
+	len1 = _strlen(name);
+	len2 = _strlen(owner);
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 	{

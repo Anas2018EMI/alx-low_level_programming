@@ -8,7 +8,6 @@
  * @argv: second arg
  * Return: int
  */
-
 int main(int argc, char *argv[])
 {
 	int i, num_bytes;
@@ -33,6 +32,8 @@ int main(int argc, char *argv[])
 	for (i = 0; i < num_bytes; i++)
 	{
 		printf("%02x", func_ptr[i]);
+		if (i < num_bytes - 1)
+			printf(" ");
 	}
 
 	printf("\n");

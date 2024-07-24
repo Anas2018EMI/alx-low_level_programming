@@ -17,14 +17,16 @@ int main(int argc, char *argv[])
 {
 	int num1, num2;
 	int (*f)(int, int);
-	bool expr2, expr3;
+	bool expr0, expr1, expr2, expr3;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2] == NULL)
+	expr0 = strcmp(argv[2], "+") != 0 && strcmp(argv[2], "-") != 0;
+	expr1 = strcmp(argv[2], "*") != 0 && strcmp(argv[2], "/") != 0;
+	if (expr0 && expr1 && strcmp(argv[2], "%") != 0)
 	{
 		printf("Error\n");
 		exit(99);

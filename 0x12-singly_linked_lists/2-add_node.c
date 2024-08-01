@@ -20,10 +20,6 @@ list_t *add_node(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	if (str == NULL)
-	{
-		return (NULL);
-	}
 	while (*(str + i) != '\0')
 	{
 		i++;

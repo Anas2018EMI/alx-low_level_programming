@@ -2,9 +2,9 @@
 #include <stddef.h>
 #include <string.h>
 #include <stdlib.h>
-/* betty style doc for function get_nodeint_at_index goes there */
+/* betty style doc for function  sum_listint goes there */
 /**
- * get_nodeint_at_index - Entry point
+ *  sum_listint- Entry point
  *
  * @head: first arg
  * Return: int

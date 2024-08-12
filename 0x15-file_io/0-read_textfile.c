@@ -25,16 +25,27 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	c = malloc(sizeof(char) * letters);
+	if (c == NULL)
+	{
+		close(fdes);
+		return (0);
+	}
 	result = read(fdes, c, letters);
 	if (result == -1)
 	{
+		free(c);
+		close(fdes);
 		return (0);
 	}
 	result1 = write(1, c, letters);
 	if (result1 < (ssize_t) letters)
 	{
+		free(c);
+		close(fdes);
 		return (0);
 	}
+	free(c);
+	close(fdes);
 
 	return (result);
 }

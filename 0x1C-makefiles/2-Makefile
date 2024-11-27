@@ -1,0 +1,31 @@
+# Makefile for School Project
+
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Object files (automatically generated from source files)
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+NAME = school
+
+# Default target
+all: $(NAME)
+
+# Link object files into executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $@
+
+# Pattern rule to compile .c files into .o files
+%.o: %.c m.h
+	$(CC) -c $< -o $@
+
+# Clean up object files and executable
+clean:
+	rm -f $(OBJ) $(NAME)
+
+# Phony targets
+.PHONY: all clean

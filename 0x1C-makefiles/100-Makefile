@@ -1,0 +1,34 @@
+# Makefile for School Project
+
+# Compiler with flags
+CC = gcc -Wall -Werror -Wextra -pedantic
+
+# Source files
+SRC = main.c school.c
+
+# Executable name
+NAME = school
+
+# Default target
+all: $(NAME)
+
+# Compile and link in one step
+$(NAME): $(SRC) m.h
+	$(CC) $(SRC) -o $@
+
+# Clean Emacs and Vim temporary files
+clean:
+	find . -type f \( -name "*~" -o -name "$(NAME)" \) -delete
+
+# Remove object files
+oclean:
+	find . -type f -name "*.o" -delete
+
+# Full clean (temporary files and executable and object files)
+fclean: clean oclean
+
+# Force recompilation
+re: fclean all
+
+# Phony targets
+.PHONY: all clean oclean fclean re

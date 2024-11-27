@@ -1,0 +1,44 @@
+# Makefile for School Project
+
+# Compiler
+CC = gcc
+
+# Source files
+SRC = main.c school.c
+
+# Object files (automatically generated from source files)
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+NAME = school
+
+# Program to delete files
+RM = rm -f
+
+# Default target
+all: $(NAME)
+
+# Link object files into executable
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $@
+
+# Pattern rule to compile .c files into .o files
+%.o: %.c m.h
+	$(CC) -c $< -o $@
+
+# Clean Emacs and Vim temporary files
+clean:
+	$(RM) *~ $(NAME)
+
+# Remove object files
+oclean:
+	$(RM) $(OBJ)
+
+# Full clean (temporary files and executable and object files)
+fclean: clean oclean
+
+# Force recompilation
+re: fclean all
+
+# Phony targets
+.PHONY: all clean oclean fclean re
